@@ -1,5 +1,5 @@
 import InformModel from '../models/InformModel.js';
-import PmetricsModel from '../models/PmetricsModel.js';
+import PmetricsModel from '../models/PMetricsModel.js';
 
 // Obtener los datos de la colección "player-metrics"
 export const getPlayerMetrics = async (req, res) => {

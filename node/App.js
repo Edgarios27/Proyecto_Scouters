@@ -11,6 +11,9 @@ import PMetricsRoutes from './routes/PMetricsRoutes.js'
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 
+
+
+
 // import PMetricRoutes from './routes/PMetricsRoutes.js';
 mongoose.connect('mongodb://127.0.0.1:27017/Scouters', { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
@@ -29,4 +32,3 @@ app.use('/users', UserRoutes)
 app.listen(8000, () =>{
     console.log('Server up running in http://localhost:8000/')
 }) 
-

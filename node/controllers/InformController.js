@@ -1,5 +1,6 @@
 import InformModel from '../models/InformModel.js';
 import { calculatePlayerMetrics } from './PMetricsController.js';
+import PlayersModel from '../models/PlayersModel.js';
 
 // Definir métodos para el CRUD 
 

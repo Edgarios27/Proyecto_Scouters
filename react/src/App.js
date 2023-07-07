@@ -1,18 +1,30 @@
 import React from 'react';
 import './App.css';
-import Registro from './Components/registro_y_login/Registro';
-import Login from './Components/registro_y_login/Login';
-import RadarChart from './Components/Metricas/RadarChart';
+import { Registro } from './Pages/LoginYRegistro/Registro';
+import { Login } from './Pages/LoginYRegistro/Login';
+import { AuthContext } from './AuthContext/AuthContext';
+import { useContext } from 'react';
+import { BrowserRouter,Routes,Route,Navigate, } from 'react-router-dom';
 
 
-const App = () => {
-  return (
-    <div>
-      <Registro/>
-        <Login/>
-        <RadarChart/>
-    </div>
+
+
+export function App() {
+  const {isLoggedIn } = useContext(AuthContext);
+  return ( 
+   
+  
+      <BrowserRouter> 
+          <Routes>
+            {/* <Route path="/" element={<Navbar/>} /> */}
+            <Route path='/confirm/:token' element={<Login/>} />
+            <Route path='/registro' element={<Registro/>} />
+             <Route path='/confirm/:token'element={isLoggedIn ? <Login /> : <Navigate to='/login'/>} />
+          </Routes>
+    </BrowserRouter>
+
   );
-};
+}
 
-export default App;
+
+

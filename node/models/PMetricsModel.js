@@ -1,26 +1,3 @@
-// import mongoose from 'mongoose';
-
-// const Schema = mongoose.Schema;
-
-// const pmetricsSchema = new Schema(
-//   {
-//     PlayerId: { type: Schema.Types.ObjectId, ref: 'PlayersModel' },
-//     Ofensiva: { type: Number },
-//     Tecnica: { type: Number},
-//     Movimiento: { type: Number },
-//     Potencia: { type: Number},
-//     Mentalidad: { type: Number },
-//     Defensa: { type: Number },
-//     Created_At: {type: Date, default: Date.now},
-//     mediaGlobal: { type: Number }
-//   },
-//   { collection: 'player-metrics' }
-// );
-
-// const PmetricsModel = mongoose.model('PmetricsModel', pmetricsSchema);
-
-// export default PmetricsModel;
-
 
 
 

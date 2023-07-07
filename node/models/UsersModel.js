@@ -5,13 +5,17 @@ const PWD_REGEX = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,60}$/;
 
 
 const userSchema = new mongoose.Schema({
-  name: {
+  nombre: {
     type: String,
     required: true,
     validate: {
       validator: (value) => USER_REGEX.test(value),
       message: 'El nombre solo puede contener letras, tanto minúsculas como mayúsculas.'
     }
+  },
+  apellidos: {
+    type: String,
+    required: true
   },
   email: {
     type: String,
@@ -27,10 +31,44 @@ const userSchema = new mongoose.Schema({
       message: 'La contraseña debe contener al menos una letra mayúscula, un número y un carácter especial, y tener entre 8 y 24 caracteres.'
     }
   },
+  nif: {
+    type: String,
+    required: true
+  },
+  club: {
+    type: String,
+    required: true
+  },
+  país: {
+    type: String,
+    required: true
+  },
+  ciudad: {
+    type: String,
+    required: true
+  },
+  cargo: {
+    type: String,
+    required: true
+  },
+  teléfono: {
+    type: String,
+    required: true
+  },
   role: {
     type: String,
     enum: ['user', 'admin'],
-  }
+    default:'user'
+  },
+  active: {
+    type:Number,
+    default: 0,
+  },
+
+  confirmationToken: {
+    type: String,
+    default: '0'
+  },
 },
   { collection: 'users' });
 

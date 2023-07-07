@@ -5,7 +5,7 @@
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -18,18 +18,16 @@
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
 .loginForm {
-  width: 20%;
-  height: 50%;
+  width: 60%;
   text-align: center;
-  background-color: #505e709e;
-  opacity: 70%;
+  background-color: #50507c64;
   border-radius: 5px;
 }
 
@@ -39,20 +37,19 @@
   border-top-right-radius: 5px;
   margin-bottom: 20px;
   height: 35px;
-  background-color: rgba(37, 38, 40, 0.347);
+  background-color: rgba(37, 38, 40, 0.591);
   padding: 20px;
   font-size: xx-small;
   text-align: center;
   justify-content: center;
   align-items: center;
-
 }
 
 .headerTitle {
   display: flex;
   text-align: center;
   color: #ffffff;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
 
@@ -60,11 +57,24 @@
   background-color: #ffffff;
   border: 1px solid #000000;
   color: #000000;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   margin-bottom: 10px;
   padding: 10px;
   width: 70%;
   border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.inputField {
+  transition: transform 0.3s;
+}
+
+.inputField:hover {
+  transform: scale(1.009);
+}
+.inputField:focus {
+  border-color: #000000;
+  box-shadow: 0 0 0 0.2rem rgba(81, 158, 13, 0.125);
 }
 
 .Register {
@@ -73,20 +83,37 @@
   margin-top: 15px;
   justify-content: center;
   border-radius: 5px;
-
 }
 
+.formRegister {
+ 
+font-family: "Oswald", sans-serif;
+text-align: center;
+background-color:  #48486fa1;;
+height: 49em;
+width: 75%;
+border-radius: 2%
+
+ 
+}
+.loginContent {
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 .registerContent {
   color: #ffffff;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: center;
-  margin-top: -10px;
+ 
 }
 
 .register-text {
   color: #ffffff;
   margin-bottom: 5px;
   text-align: center;
+  height: 10rem;
 }
 
 .loginLink {
@@ -97,7 +124,7 @@
   cursor: pointer;
 }
 
-.registerButton{
+.registerButton {
   width: 83%;
   background-color: #c7f55c;
   color: #000000;
@@ -107,5 +134,121 @@
   font-weight: 600;
   border: none;
   cursor: pointer;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
+.registerButton:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em #ffffff;
+}
+
+.registerButton:hover {
+  box-shadow: 0px 0px 8px 0px #111213;
+}
+
+.feed-form {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.feed-form input {
+  height: 54px;
+  border-radius: 5px;
+  background: white;
+  margin-bottom: 15px;
+  border: none;
+  padding: 0 20px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #4b4b4b;
+}
+
+.button_submit:hover,
+.feed-form input:hover {
+  transform: scale(1.009);
+  box-shadow: 0px 0px 3px 0px #212529;
+}
+
+.button_submit {
+  width: 100%;
+  height: 54px;
+  font-size: 14px;
+  color: white;
+  background: red;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.button_submit:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em #000000;
+}
+
+.input-focused .MuiOutlinedInput-notchedOutline {
+  border: none;
+}
+
+.inputBox {
+  position: relative;
+}
+
+.inputBox input {
+  outline: none;
+  width: 75%;
+  height: 35px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #ababab;
+  border: 1px solid#95ee56;
+  font-size: 1em;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding-left: 4rem;
+  pointer-events: none;
+  font-size: 1em;
+  transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+  color: #a8a4a4;
+  letter-spacing: 0.1em;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+  font-size: 0.7em;
+  transform: translateX(5) translateY(10.5px);
+  padding: 0 5px;
+
+  margin-bottom: 250px;
+
+  border-radius: 2px;
+  background: #2a2a2af1;
+  letter-spacing: 0em;
+  border: 1px solid #98ee56;
+}
+
+
+
+.MuiButton-root:active {
+  transform: scale(0.97);
+}
+
+  .input-focused .MuiOutlinedInput-notchedOutline {
+    border-color: red;
+  }
+  @media (min-width: 760px) {
+    .grid{
+      width: 20vh;
+    }
+    .MuiButton-root {
+      width: 14rem !important;
+    }
+    .formRegister {
+      width:30rem;
+      height: 50rem;   
+    
+  }
+  }

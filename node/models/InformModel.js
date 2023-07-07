@@ -40,3 +40,5 @@ informSchema.pre('save', function (next) {
 });
 
 export default mongoose.model('InformModel', informSchema);
+
+
