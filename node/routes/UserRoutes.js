@@ -3,11 +3,12 @@ import express from 'express';
 import { registerUser, loginUser,  } from '../controllers/UsersController.js';
 import { authenticateUser } from '../authMiddelware/authMiddelware.js';
 import User from '../models/UsersModel.js';
-const router = express.Router();
+;
 
+const router = express.Router();
+router.post('/register', registerUser, authenticateUser);
 // Ruta para registrar un nuevo usuario (solo accesible para administradores)
 router.post('/register', registerUser, authenticateUser);
-
 // Ruta para iniciar sesión
 router.post('/login', loginUser);
 
@@ -23,7 +24,7 @@ router.get('/confirm/:token', async (req, res) => {
     const user = await User.findOne({ confirmationToken: token });
     console.log(user)
     if (!user) {
-      return res.status(400).json({ message: 'Token de confirmación inválido' });
+      return res.redirect('http://localhost:3000/error');
     }
 
    const userUpdate = await User.updateOne(
@@ -38,6 +39,8 @@ router.get('/confirm/:token', async (req, res) => {
     res.status(500).json({ message: 'Error al confirmar correo electrónico' });
   }
 });
+
+
 
 router.get('/admin', authenticateUser);
 
