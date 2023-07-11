@@ -8,16 +8,16 @@ const PWD_REGEX = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,60}$/;
 export const registerUser = async (req, res) => {
   try {
     const {
-      nombre,
-      apellidos,
+      name,
+      surname,
       password,
       nif,
       club,
-      pais,
-      ciudad,
-      telefono,
+      country,
+      city,
+      phone,
       email,
-      cargo,
+      post,
     } = req.body;
     if (req.body.role) {
       return res.status(400).json({
@@ -37,16 +37,16 @@ export const registerUser = async (req, res) => {
     }
 
     const newUser = new User({
-      nombre,
-      apellidos,
+      name,
+      surname,
       password,
       nif,
       club,
-      pais,
-      ciudad,
-      telefono,
+      country,
+      city,
+      phone,
       email,
-      cargo,
+      post,
     });
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(newUser.password, saltRounds);
@@ -64,7 +64,7 @@ export const registerUser = async (req, res) => {
         service: "hotmail",
         auth: {
           user: "Alejandro.902019@hotmail.com",
-          pass: "hijodeDios2",
+          pass: "tu contraseña",
         },
       });
 

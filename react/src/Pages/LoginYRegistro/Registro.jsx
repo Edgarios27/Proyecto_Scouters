@@ -20,16 +20,16 @@ import { useMediaQuery } from "@material-ui/core";
 import "animate.css/animate.min.css";
 
 export const Registro = () => {
-  const [nombre, setNombre] = useState("");
-  const [apellidos, setApellidos] = useState("");
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [club, setClub] = useState("");
   const [nif, setNif] = useState("");
-  const [cargo, setCargo] = useState("");
-  const [pais, setPais] = useState("");
-  const [ciudad, setCiudad] = useState("");
-  const [telefono, setTelefono] = useState("");
+  const [post, setPost] = useState("");
+  const [country, setCountry] = useState("");
+  const [city, setCity] = useState("");
+  const [phone, setPhone] = useState("");
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
   const navigate = useNavigate();
   const [isChecked, setIsChecked] = useState(false); //
@@ -43,7 +43,7 @@ export const Registro = () => {
 
   //funcion para cambiar el color de los selectores//
   const handleChange = (event) => {
-    setCargo(event.target.value);
+    setPost(event.target.value);
   };
 
   //función para enviar el formulario al hacer click al boton registrar//
@@ -55,16 +55,16 @@ export const Registro = () => {
       const response = await axios.post(
         "http://localhost:8000/users/register",
         {
-          nombre,
-          apellidos,
+          name,
+          surname,
           password,
           nif,
           club,
-          pais,
-          ciudad,
-          telefono,
+          country,
+          city,
+          phone,
           email,
-          cargo,
+          post,
         }
       );
 
@@ -162,9 +162,9 @@ export const Registro = () => {
               fullWidth
               required
               style={{ outlineOffset: "red " }}
-              value={nombre}
+              value={name}
               className="dark-input"
-              onChange={(event) => setNombre(event.target.value)}
+              onChange={(event) => setName(event.target.value)}
               InputProps={{ style: inputStyle }}
             />
           </Grid>
@@ -175,8 +175,8 @@ export const Registro = () => {
               variant="outlined"
               fullWidth
               required
-              value={apellidos}
-              onChange={(event) => setApellidos(event.target.value)}
+              value={surname}
+              onChange={(event) => setSurname(event.target.value)}
               InputProps={{ style: inputStyle }}
             />
           </Grid>
@@ -252,8 +252,8 @@ export const Registro = () => {
               variant="outlined"
               fullWidth
               required
-              value={pais}
-              onChange={(event) => setPais(event.target.value)}
+              value={country}
+              onChange={(event) => setCountry(event.target.value)}
               InputProps={{ style: inputStyle, width: "30rem" }}
             />
           </Grid>
@@ -264,8 +264,8 @@ export const Registro = () => {
               variant="outlined"
               fullWidth
               required
-              value={ciudad}
-              onChange={(event) => setCiudad(event.target.value)}
+              value={city}
+              onChange={(event) => setCity(event.target.value)}
               InputProps={{ style: inputStyle }}
             />
           </Grid>
@@ -276,8 +276,8 @@ export const Registro = () => {
               variant="outlined"
               fullWidth
               required
-              value={telefono}
-              onChange={(event) => setTelefono(event.target.value)}
+              value={phone}
+              onChange={(event) => setPhone(event.target.value)}
               InputProps={{ style: inputStyle }}
             />
           </Grid>
@@ -291,7 +291,7 @@ export const Registro = () => {
             row
             aria-label="rol"
             name="rol"
-            value={cargo}
+            value={post}
             onChange={handleChange}
           >
             <FormControlLabel
@@ -299,7 +299,7 @@ export const Registro = () => {
               control={
                 <Radio
                   style={{
-                    color: cargo === "ojeador" ? "#C7F55C" : "",
+                    color: post === "ojeador" ? "#C7F55C" : "",
                   }}
                 />
               }
@@ -318,7 +318,7 @@ export const Registro = () => {
               control={
                 <Radio
                   style={{
-                    color: cargo === "otros" ? "#C7F55C " : "",
+                    color: post === "otros" ? "#C7F55C " : "",
                   }}
                 />
               }

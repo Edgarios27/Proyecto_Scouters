@@ -53,7 +53,7 @@ export const Login = () => {
       console.error(error);
     }
   };
-
+  login();
   useEffect(() => {
     return () => {
       setShowLoader(false);

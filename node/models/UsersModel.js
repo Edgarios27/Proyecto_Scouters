@@ -5,7 +5,7 @@ const PWD_REGEX = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,60}$/;
 
 
 const userSchema = new mongoose.Schema({
-  nombre: {
+  name: {
     type: String,
     required: true,
     validate: {
@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
       message: 'El nombre solo puede contener letras, tanto minúsculas como mayúsculas.'
     }
   },
-  apellidos: {
+ surname: {
     type: String,
     required: true
   },
@@ -39,19 +39,19 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  pais: {
+  country: {
     type: String,
     required: true
   },
-  ciudad: {
+ city: {
     type: String,
     required: true
   },
-  cargo: {
+  post: {
     type: String,
     required: true
   },
-  telefono: {
+ phone: {
     type: String,
     required: true
   },
