@@ -141,8 +141,8 @@ export const Registro = () => {
   };
 
   return (
-    <div className="register-container">
-      <form className="formRegister" onSubmit={handleRegister}>
+    <div className="register-container"  autocomplete="off">
+      <form className="formRegister" autocomplete="off" onSubmit={handleRegister}>
         <header className="HeaderRegister">
           <h1 className="headerTitle">REGISTRATE</h1>
         </header>
@@ -153,8 +153,9 @@ export const Registro = () => {
           className="gridRegister"
           style={{ width: "45%", margin: "auto", height: "10%" }}
           direction="row"
+          autocomplete="off"
         >
-          <Grid className="gridRegister" item xs={6} sm={6}>
+          <Grid className="gridRegister"   item xs={6} sm={6}>
             <TextField
               id="nombre"
               label="Nombre"
@@ -163,6 +164,7 @@ export const Registro = () => {
               required
               style={{ outlineOffset: "red " }}
               value={name}
+              autocomplete="off"
               className="dark-input"
               onChange={(event) => setName(event.target.value)}
               InputProps={{ style: inputStyle }}
@@ -281,57 +283,47 @@ export const Registro = () => {
               InputProps={{ style: inputStyle }}
             />
           </Grid>
-          <RadioGroup
-            style={{
-              display: "flex",
-              justifyContent: "space-evenly",
-              paddingTop: "10px",
-              marginLeft: matches ? "5em" : "15px",
-            }}
-            row
-            aria-label="rol"
-            name="rol"
-            value={post}
-            onChange={handleChange}
-          >
-            <FormControlLabel
-              value="ojeador"
-              control={
-                <Radio
-                  style={{
-                    color: post === "ojeador" ? "#C7F55C" : "",
-                  }}
-                />
-              }
-              label={
-                <Typography
-                  variant="span"
-                  style={{ color: "rgba(255, 255, 255, 0.79)" }}
-                >
-                  Otros
-                </Typography>
-              }
-            />
-
-            <FormControlLabel
-              value="otros"
-              control={
-                <Radio
-                  style={{
-                    color: post === "otros" ? "#C7F55C " : "",
-                  }}
-                />
-              }
-              label={
-                <Typography
-                  variant="span"
-                  style={{ color: "rgba(255, 255, 255, 0.79)" }}
-                >
-                  Ojeador
-                </Typography>
-              }
-            />
-          </RadioGroup>
+          <RadioGroup style={{margin:"auto",display:"flex",justifyContent:"space-evenly",paddingTop:"10px",marginLeft:"3em",gap:"3rem"}}
+          row
+          aria-label="rol"
+          name="rol"
+          value={post}
+          onChange={handleChange}
+        >
+          
+          <FormControlLabel
+            value="ojeador"
+            control={
+              <Radio
+                style={{
+                  color: post === 'ojeador' ? "#C7F55C" : '',
+                }}
+              />
+            }
+            label={
+              <Typography variant="span" style={{color: "rgba(255, 255, 255, 0.79)" }}>
+              Jugador
+              </Typography>
+            }
+          />
+          
+          <FormControlLabel
+            value="jugador"
+            control={
+              <Radio
+                style={{
+                  color: post === 'jugador' ? "#C7F55C ": '',
+                }}
+              />
+              
+            }
+            label={
+              <Typography variant="span" style={{color: "rgba(255, 255, 255, 0.79)" }}>
+              Ojeador
+              </Typography>
+            }
+          />
+        </RadioGroup>
           <FormControl
             style={{
               display: "flex",

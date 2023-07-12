@@ -7,6 +7,7 @@ import { useContext } from 'react';
 import { BrowserRouter,Routes,Route,Navigate, } from 'react-router-dom';
 import { Error } from './Pages/LoginYRegistro/Error';
 import { Cuenta } from './Pages/LoginYRegistro/Cuenta';
+import { Prueba } from './Pages/LoginYRegistro/Prueba';
 
 
 
@@ -24,6 +25,7 @@ export function App() {
             <Route path='/error' element={<Error/>} />
             <Route path='/registro' element={<Registro/>} />
             <Route path='/cuenta' element={<Cuenta/>} />
+            <Route path='/prueba' element={<Prueba/>} />
 
              {/* <Route path='/confirm/:token'element={isLoggedIn ? <Login /> : <Navigate to='/login'/>} /> */}
              <Route path='/cuenta'element={isLoggedIn ? <Cuenta /> : <Navigate to='/login'/>} />
