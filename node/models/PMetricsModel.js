@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;

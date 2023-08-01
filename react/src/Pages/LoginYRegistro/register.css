@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Rajdhani&display=swap");
+<<<<<<< HEAD
 
+=======
+/* COLORES DEL PROYECTO */
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 :root {
   --verde: #c7f55c;
   --gris: #36404c;
@@ -8,7 +12,12 @@
   --oscuro: #201e1f;
 }
 
+<<<<<<< HEAD
 .register-container2 {
+=======
+/*Css Register */
+.register-container {
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
   display: flex;
   background-image: url(./img/2.jpg);
   background-repeat: no-repeat;
@@ -21,15 +30,25 @@
   text-align: center;
 }
 
+<<<<<<< HEAD
 .HeaderRegister2 {
   display: flex;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-color: rgba(37, 38, 40, 0.979);
+=======
+.HeaderRegister {
+  display: flex;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: rgba(37, 38, 40, 0.591);
+  /* font-size: xx-small; */
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
   height: 4rem;
   text-align: center;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
 }
 
 .headerTitle2 {
@@ -142,11 +161,14 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+=======
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 }
 
 .headerTitle {
   font-family: "Oswald";
   display: flex;
+  margin-top: 2rem;
   text-align: center;
   color: #ffffff;
   font-weight: 200;
@@ -155,10 +177,17 @@
 .formRegister {
   text-align: center;
   background-color: rgba(54, 64, 76, 0.4);
+<<<<<<< HEAD
   height: 100%;
   width: 40%;
   border-radius: 2%;
   border: 2px red solid;
+=======
+  height: 50rem;
+  margin-bottom: 15px;
+  width: 100%;
+  border-radius: 2%;
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 }
 
 .Account {
@@ -168,9 +197,16 @@
   justify-content: center;
   gap: 12px;
   text-decoration: none;
+<<<<<<< HEAD
   margin-top: 30rem;
 }
 
+=======
+  margin-top: 27rem;
+}
+.inputNif {
+}
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 .link {
   text-decoration: none;
   color: #ffffff;
@@ -185,11 +221,26 @@
   height: 10rem;
 }
 
+<<<<<<< HEAD
+=======
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding-left: 4rem;
+  pointer-events: none;
+  font-size: 1em;
+  transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+  color: #a8a4a4;
+  letter-spacing: 0.1em;
+}
+
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 .MuiButton-root:active {
   transform: translate(0.05em, 0.05em);
   box-shadow: 0.05em 0.05em #000000;
   transform: scale(0.97);
 }
+<<<<<<< HEAD
 
 
 /* LOGIN */
@@ -197,6 +248,12 @@
 
 .login-container {
   font-family: 'Oswald';
+=======
+/*Fin Css Register */
+
+/*Css Login */
+.login-container {
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
   display: flex;
   background-image: url("./img/1.jpg");
   background-repeat: no-repeat;
@@ -214,7 +271,11 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-color: rgba(37, 38, 40, 0.591);
+<<<<<<< HEAD
 
+=======
+  /* font-size: xx-small; */
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
   text-align: center;
   font-family: "Oswald";
   justify-content: center;
@@ -226,13 +287,21 @@
   margin-top: 2rem;
   text-align: center;
   color: #ffffff;
+<<<<<<< HEAD
   font-size: 28px;
+=======
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
   font-weight: 200;
 }
 
 .loginForm {
+<<<<<<< HEAD
   width: 45%;
   height: 18rem;
+=======
+  width: 40%;
+  height: 20rem;
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
   text-align: center;
   background-color: rgba(54, 64, 76, 0.4);
   border-radius: 5px;
@@ -268,12 +337,133 @@
   height: 10rem;
 }
 
+<<<<<<< HEAD
 @media (min-width: 760px) {
   .formRegister {
     width: 46rem;
     height: 53em;
   }
 
+=======
+.input-focused .MuiOutlinedInput-notchedOutline {
+  border: none;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding-left: 4rem;
+  pointer-events: none;
+  font-size: 1em;
+  transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+  color: #a8a4a4;
+  letter-spacing: 0.1em;
+}
+/*Fin css Login*/
+
+/*Pagina expiración de Token -Error*/
+.error-container {
+  display: flex;
+  background-image: url("https://images.unsplash.com/photo-1490696809909-71f5f1fd23e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2080&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.HeaderError {
+  display: flex;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: rgba(37, 38, 40, 0.591);
+  font-size: xx-small;
+  text-align: center;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerTitleError {
+  display: flex;
+  margin-top: 2rem;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.errorForm {
+  width: 70%;
+  height: 20rem;
+  text-align: center;
+  background-color: #50507c64;
+  border-radius: 5px;
+}
+.errorContent {
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 15px;
+}
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #433d5b;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 17px;
+  padding: 16px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 15px;
+}
+.button:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Media query Register-Login-Error*/
+@media (min-width: 760px) {
+  .formRegister {
+    width: 46rem;
+    height: 48em;
+  }
+  .Account {
+    margin-top: 24rem;
+  }
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
   .HeaderRegister {
     height: 4rem;
     margin-bottom: 20px;
@@ -281,6 +471,7 @@
   .headerTitle {
     margin-top: 1rem;
   }
+<<<<<<< HEAD
   .headerTitleLogin {
     font-size: 30px;
   }
@@ -288,6 +479,12 @@
   .loginForm {
     width: 35%;
     height: 32%;
+=======
+
+  /* login  */
+  .loginForm {
+    width: 35%;
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
   }
 
   .link {
@@ -296,6 +493,7 @@
   .link1 {
     font-size: 14px;
   }
+<<<<<<< HEAD
 }
 .link1-reset{
   text-decoration: none;
@@ -305,6 +503,20 @@
   font-weight: 200;
   font-size: 12px;
 }
+=======
+
+  /* Error  */
+  .errorForm {
+    width: 40%;
+    height: 20rem;
+    text-align: center;
+    background-color: #50507c64;
+    border-radius: 5px;
+  }
+}
+
+/*Loading-spinner*/
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 
 .loader {
   font-size: 10px;
@@ -392,17 +604,32 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+<<<<<<< HEAD
 /* 
+=======
+/*FIn Loading-spinner*/
+
+
+/*Ckeck-bOx*/
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 .checkbox {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   margin-top: 40px;
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 
 .checkbox input[type="checkbox"] {
   position: absolute;
   opacity: 0;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 }
 
 .checkbox-circle {
@@ -417,10 +644,17 @@
 }
 
 .checkbox input[type="checkbox"]:checked ~ .checkbox-circle {
+<<<<<<< HEAD
   background: #bcf141;
   border-color: #000000;
 } */
 /* 
+=======
+  background:#bcf141;
+  border-color:#000000;
+}
+
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 .checkmark {
   position: absolute;
   top: 0;
@@ -459,6 +693,7 @@
 
 .checkbox input[type="checkbox"]:checked ~ .checkbox-circle .checkmark-kick {
   stroke-dashoffset: 0;
+<<<<<<< HEAD
 } */
 /* .imagen {
   width: 90px;
@@ -688,3 +923,20 @@ margin-bottom: 22px;
 
 .forgotPassword{ margin-top: 15px
 }
+=======
+}
+ .imagen{
+  width: 90px;
+  border-radius: 50%;
+ }
+ /* Fin Ckeck-bOx*/
+
+
+ /* .star.active {
+  color: rgb(127, 255, 58);
+
+} */
+
+
+  /* Otros estilos que desees aplicar */
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907

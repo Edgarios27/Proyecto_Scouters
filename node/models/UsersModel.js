@@ -51,7 +51,11 @@ const userSchema = new mongoose.Schema({
     required: true
   },
  phone: {
+<<<<<<< HEAD
     type: Number,
+=======
+    type: String,
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
     required: true
   },
   role: {
@@ -70,11 +74,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: '0'
   },
+<<<<<<< HEAD
   confirmationTokenCreatedAt: {
     type: Date,
     default: null
   }
 
+=======
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 },
 
   { collection: 'users', versionKey: false }

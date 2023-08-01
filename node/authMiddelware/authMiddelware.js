@@ -6,7 +6,8 @@ const authenticateUser = async (req, res, next) => {
       }
   
       try {
-        const decodedToken = jwt.verify(token, 'abc123'); 
+        // const decodedToken = jwt.verify(token, 'abc123'); 
+        const decodedToken = jwt.verify(token, 'a465464bc123'); 
         const userId = decodedToken.userId;
         const userRole = decodedToken.role;
   

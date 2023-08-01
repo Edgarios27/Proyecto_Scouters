@@ -1,4 +1,5 @@
 import express from 'express';
+<<<<<<< HEAD
     import cors from 'cors';
     // importamos la conexión a la DB
     import db from './database/db.js';
@@ -11,6 +12,24 @@ import express from 'express';
     import mongoose from 'mongoose';
     import multer from 'multer';
   
+=======
+import cors from 'cors';
+// importamos la conexión a la DB
+import db from './database/db.js';
+// importamos nuestro enrutador
+import PlayerRoutes from './routes/PlayerRoutes.js';
+import InformRoutes from './routes/InformRoutes.js';
+import UserRoutes from './routes/UserRoutes.js';
+import PMetricsRoutes from './routes/PMetricsRoutes.js'
+// import PMetricRoutes from './routes/PMetricsRoutes.js';
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+import multer from 'multer';
+
+
+
+
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
 
     mongoose.connect('mongodb://127.0.0.1:27017/Scouters', { useNewUrlParser: true, useUnifiedTopology: true });
     mongoose.Promise = global.Promise;
@@ -27,6 +46,7 @@ import express from 'express';
     app.use('/users', UserRoutes)
  
 
+<<<<<<< HEAD
 const storage = multer.diskStorage({
   destination: './uploads/nif', // Carpeta de destino para los archivos adjuntos
   filename: function (req, file, cb) {
@@ -56,10 +76,54 @@ app.post('/uploads/nif', upload.single('file'), async (req, res) => {
     return res.status(500).json({ error: 'Error al guardar la imagen en la base de datos. Por favor, inténtalo de nuevo más tarde.' });
   }
 });
+=======
+
+//función
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'uploads/');
+    },
+    filename: function (req, file, cb) {
+
+      cb(null,`${Date.now()}-${file.originalname}`);
+    },
+  });
+
+  //función
+  const upload=multer({storage})
+ 
+  
+  //rutas multer
+app.post('/upload', upload.single('file'), (req, res) => {
+    if (!req.file) {
+     
+      return res.status(404).send({
+        success: "Error",
+        error: 'Error al subir la imagen',
+      });
+    }
+    console.log(req.file);
+    return res.status(200).send({
+      success:"Ok",
+      message: 'Imagen subida con exito',
+    });
+  });
+    
+
+app.listen(8000, () =>{
+    console.log('Server up running in http://localhost:8000/')
+}) 
 
 
 
 
+  
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
+
+
+
+
+<<<<<<< HEAD
 
 
 
@@ -68,3 +132,5 @@ app.post('/uploads/nif', upload.single('file'), async (req, res) => {
     app.listen(8000, () =>{
         console.log('Server up running in http://localhost:8000/')
     })
+=======
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907

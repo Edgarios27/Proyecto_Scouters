@@ -1,5 +1,5 @@
 import express from 'express';
-import { calculatePlayerMetrics, getPlayerMetrics } from '../controllers/PMetricsController.js';
+import { calculatePlayerMetrics,  } from '../controllers/PMetricsController.js';
 
 const router = express.Router();
 
@@ -7,7 +7,7 @@ const router = express.Router();
 router.post('/calculate', calculatePlayerMetrics)
 
 // Obtener los datos de la colección "player-metrics"
-router.get('/', getPlayerMetrics);
+// router.get('/', getPlayerMetrics);
 
 
 export default router;

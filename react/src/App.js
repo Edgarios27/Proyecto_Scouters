@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+<<<<<<< HEAD
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import {Landing} from './Pages/Landing/Landing'
 import { AvisoLegal } from './Pages/AvisoLegal/AvisoLegal';
@@ -32,6 +33,42 @@ export function App() {
         <Route path="/comparar" element={<CompararJugadores />} />
       </Routes>
     </BrowserRouter>
+=======
+import { Registro } from './Pages/LoginYRegistro/Registro';
+import { Login } from './Pages/LoginYRegistro/Login';
+import { AuthContext } from './AuthContext/AuthContext';
+import { useContext } from 'react';
+import { BrowserRouter,Routes,Route,Navigate, } from 'react-router-dom';
+import { Error } from './Pages/LoginYRegistro/Error';
+import { Cuenta } from './Pages/LoginYRegistro/Cuenta';
+import { Prueba } from './Pages/LoginYRegistro/Prueba';
+
+
+
+
+
+export function App() {
+  const {isLoggedIn } = useContext(AuthContext);
+  return ( 
+   
+  
+      <BrowserRouter> 
+          <Routes>
+            {/* <Route path="/" element={<Navbar/>} /> */}
+            <Route path='/login' element={<Login/>} />
+            <Route path='/error' element={<Error/>} />
+            <Route path='/registro' element={<Registro/>} />
+            <Route path='/cuenta' element={<Cuenta/>} />
+            <Route path='/prueba' element={<Prueba/>} />
+
+             {/* <Route path='/confirm/:token'element={isLoggedIn ? <Login /> : <Navigate to='/login'/>} /> */}
+             <Route path='/cuenta'element={isLoggedIn ? <Cuenta /> : <Navigate to='/login'/>} />
+          </Routes>
+    </BrowserRouter>
+
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
   );
-};
+}
+
+
 

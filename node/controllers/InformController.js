@@ -1,5 +1,6 @@
 import InformModel from '../models/InformModel.js';
 import { calculatePlayerMetrics } from './PMetricsController.js';
+import PlayersModel from '../models/PlayersModel.js';
 
 // Definir métodos para el CRUD 
 
@@ -84,4 +85,9 @@ export const deleteInform = async (req, res) => {
   } catch (error) {
     res.json({ message: error.message })
   }
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907

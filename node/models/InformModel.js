@@ -101,4 +101,10 @@ informSchema.pre('save', function (next) {
   next();
 });
 
+<<<<<<< HEAD
 export default mongoose.model("InformModel", informSchema)
+=======
+export default mongoose.model('InformModel', informSchema);
+
+
+>>>>>>> 3de3b527cf41b12ca0381bc251df9af783333907
