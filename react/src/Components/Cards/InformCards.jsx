@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
 import './InformCard.css';
 import { Link } from 'react-router-dom';
-import jugadorImg from './imgs/InformeIcono.jpg';
 import { InformsContext } from '../../Context/Context';
 import { PlayersContext } from '../../Context/Context';
 
 export function InformCards() {
   const { informsData } = useContext(InformsContext);
   const { data, getAbreviacionPosicion } = useContext(PlayersContext);
-  const backgroundImageUrl = jugadorImg;
+  const backgroundImageUrl = 'https://images.pexels.com/photos/4559555/pexels-photo-4559555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
 
   // Verificar si data existe y es un array antes de llamar a map
   if (!Array.isArray(data) || data.length === 0) {
