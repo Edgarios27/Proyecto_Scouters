@@ -201,20 +201,20 @@ export const RadarChart = ({ playerId }) => {
         });
       }
 
-      setFisicasChartData({
-        ...fisicasChartData,
+      setFisicasChartData((prevData) => ({
+        ...prevData,
         datasets: fisicasDatasets,
-      });
-
-      setPrincipalesChartData({
-        ...principalesChartData,
+      }));
+    
+      setPrincipalesChartData((prevData) => ({
+        ...prevData,
         datasets: principalesDatasets,
-      });
-
-      setTacticasChartData({
-        ...tacticasChartData,
+      }));
+    
+      setTacticasChartData((prevData) => ({
+        ...prevData,
         datasets: tacticasDatasets,
-      });
+      }));
     }
   }, [playerMetricsData, playerId]);
 
@@ -229,7 +229,7 @@ export const RadarChart = ({ playerId }) => {
               type="radar"
               data={{ labels: fisicasChartData.labels, datasets: [dataset] }}
               options={lightOptions}
-              style={{ position: 'relative', width: '80%' }}
+              style={{ position: 'relative', width: '70%' }}
             />
           ))}
         </div>
@@ -242,7 +242,7 @@ export const RadarChart = ({ playerId }) => {
               type="radar"
               data={{ labels: principalesChartData.labels, datasets: [dataset] }}
               options={lightOptions}
-              style={{ position: 'relative', width: '80%' }}
+              style={{ position: 'relative', width: '70%' }}
             />
           ))}
         </div>
@@ -255,7 +255,7 @@ export const RadarChart = ({ playerId }) => {
               type="radar"
               data={{ labels: tacticasChartData.labels, datasets: [dataset] }}
               options={lightOptions}
-              style={{ position: 'relative', width: '80%' }}
+              style={{ position: 'relative', width: '70%' }}
             />
           ))}
         </div>
@@ -263,8 +263,3 @@ export const RadarChart = ({ playerId }) => {
     </div>
   );
 };
-
-
-
-
-

@@ -1,16 +1,16 @@
 .chartsContainer {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    /* flex-wrap: wrap;
+    justify-content: space-between; */
     /* or justify-content: space-evenly; */
 }
 
 .fisicasRadar,
 .principalesRadar,
 .tacticasRadar {
-    /* Add any specific styles for individual radar chart containers if needed */
-    flex: 1 1 30%;
-    /* Adjust the width of each chart as per your requirement */
+    flex: 1 1 33%;
+    display: flex;
+    justify-content: center;
 }
 
 /* COLORES DEL PROYECTO */
